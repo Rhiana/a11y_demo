@@ -9,6 +9,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="header">
+      <img src="https://cdn.pixabay.com/photo/2015/09/14/18/57/banner-939948_960_720.jpg">
+    </div>
+    <div class="wrap">
+      <%= yield %>
+    </div>
+    <div class="footer">
+      <%= image_tag "purple_background", height: "100" %>
+    </div>
   </body>
 </html>
