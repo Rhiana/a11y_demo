@@ -1,7 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>A11yDemo</title>
+    <title>
+      Accessibility Demo
+      <% if current_page?(controller: 'posts', action: 'new') %>
+        - New Blog post
+      <% end %>
+    </title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,14 +14,14 @@
   </head>
 
   <body>
-    <div class="header">
-      <%= image_tag "banner-939948_960_720.jpg" %>
-    </div>
-    <div class="wrap">
+    <header class="header">
+      <%= image_tag "banner-939948_960_720.jpg", alt: "" %>
+    </header>
+    <main class="wrap">
       <%= yield %>
-    </div>
-    <div class="footer">
-      <%= image_tag "purple_background", height: "100" %>
-    </div>
+    </main>
+    <footer class="footer">
+      <%= image_tag "purple_background", height: "100", alt: "" %>
+    </footer>
   </body>
 </html>
